@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>EYN Sổ cái</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&family=Geist+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+  <div class="app" id="app">
+    <aside class="sidebar" aria-label="Điều hướng chính">
+      <div class="brand">
+        <span class="brand-mark" aria-hidden="true">E</span>
+        <span class="od-stack" style="--od-gap:0"><span class="brand-name">EYN Sổ cái</span><span class="brand-sub">Kế toán dịch vụ</span></span>
+      </div>
+      <nav class="nav" id="nav"></nav>
+      <div class="sidebar-foot od-row">
+        <span class="od-fill od-row" id="userbox" style="--od-gap:8px"></span>
+        <button type="button" class="btn btn-ghost btn-icon" aria-label="Đăng xuất" onclick="EYN.toast('Đã đăng xuất khỏi Sổ cái', { text: 'Phiên CRM vẫn giữ nguyên.', icon: 'log-out' })">
+          <svg class="od-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" x2="9" y1="12" y2="12"/></svg>
+        </button>
+      </div>
+    </aside>
+    <div class="main">
+      <header class="topbar" id="topbar"></header>
+      <div class="od-screen" style="min-height:0">
+        <div class="banner" id="banner" hidden></div>
+        <main class="content" id="content" tabindex="-1"></main>
+        <div></div>
+      </div>
+    </div>
+  </div>
+
+  <aside class="drawer" id="assistant" hidden aria-label="Trợ lý hỏi đáp"></aside>
+  <dialog class="dlg" id="dlg"></dialog>
+  <dialog class="dlg cmdk" id="cmdk" aria-label="Tìm kiếm và lệnh"></dialog>
+  <div class="toasts" id="toasts" aria-live="polite"></div>
+
+  <script src="js/core.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/views-work.js"></script>
+  <script src="js/views-entry.js"></script>
+  <script src="js/views-books.js"></script>
+  <script src="js/views-reports.js"></script>
+  <script src="js/views-close.js"></script>
+  <script src="js/views-master.js"></script>
+  <script src="js/views-catalog.js"></script>
+  <script src="js/views-stock.js"></script>
+  <script src="js/views-payroll.js"></script>
+  <script src="js/views-costing.js"></script>
+  <script>EYN.start();</script>
+</body>
+</html>
